@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>[code] agency - 유남미</title>
+
+	<!-- vendor -->
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+	<!-- css -->
+	<link rel="stylesheet" href="./assets/css/reset.min.css">
+	<link rel="stylesheet" href="./assets/css/responsive-grid.min.css">
+	<link rel="stylesheet" href="./assets/css/core.min.css">
+	<link rel="stylesheet" href="./assets/css/main.min.css">
+
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="name">유남미</div>
+			<ul>
+				<li class="menu"><a href="#">Project</a></li>
+				<li class="menu"><a href="#">Team</a></li>
+				<li class="menu"><a href="#">Team</a></li>
+			</ul>
+		</div>
+	</header>
+
+	<main>
+		<div class="container">
+			<div class="slider">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<h2 class="title">Portfolio</h2>
+							<div class="desc">HTML, JavaScript, SASS 등 Front-end 개발 연습하기 위해 퍼블리싱 했습니다.</div>
+						</div>
+						<div class="swiper-slide">22</div>
+						<div class="swiper-slide">33</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<script>
+		const swiper = new Swiper('.swiper-container' , {
+			sliderPerView: 1,
+		});
+	</script>
+</body>
+</html>
