@@ -8,7 +8,8 @@ html, body {
 }
 
 body {
-	font-family: 'AppleSDGothicNeo', 'Malgun Gothic', sans-serif;
+	// font-family: 'AppleSDGothicNeo', 'Malgun Gothic', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 1em;
 	font-weight: 400;
 	line-height: 1.5;
@@ -51,6 +52,11 @@ img, iframe, video, object, embed, button, select, input, textarea {
 	border: 0;
 	box-shadow: none;
 	overflow: visible;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
 }
 
 li {

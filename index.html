@@ -17,39 +17,202 @@
 	<link rel="stylesheet" href="./assets/css/core.min.css">
 	<link rel="stylesheet" href="./assets/css/main.min.css">
 
+	<!-- font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
 </head>
 <body>
-	<header>
+	<header id="header">
 		<div class="container">
-			<div class="name">유남미</div>
-			<ul>
-				<li class="menu"><a href="#">Project</a></li>
-				<li class="menu"><a href="#">Team</a></li>
-				<li class="menu"><a href="#">Team</a></li>
-			</ul>
+			<div class="header-inner">
+				<div class="name">Yoo Nam Mi</div>
+				<ul class="menu">
+					<li class="item"><a href="#">Project</a></li>
+					<li class="item"><a href="#">Team</a></li>
+					<li class="item"><a href="#">Contact Us</a></li>
+				</ul>
+			</div>
 		</div>
 	</header>
 
-	<main>
-		<div class="container">
+	<main id="main">
+		<div class="main-inner">
 			<div class="slider">
 				<div class="swiper-container">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
-							<h2 class="title">Portfolio</h2>
-							<div class="desc">HTML, JavaScript, SASS 등 Front-end 개발 연습하기 위해 퍼블리싱 했습니다.</div>
+							<div class="slider-inner slide01">
+								<div class="container">
+									<h2 class="title">Portfolio</h2>
+									<div class="desc">HTML, JavaScript, SASS 등 Front-end 개발 연습하기 위해 퍼블리싱 했습니다.</div>
+								</div>
+							</div>
 						</div>
-						<div class="swiper-slide">22</div>
-						<div class="swiper-slide">33</div>
+						<div class="swiper-slide">
+							<div class="slider-inner slide02">
+								<div class="container">
+									<h2 class="title">PROGRAMMING</h2>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="slider-inner slide03">
+								<div class="container">
+									<div class="bg"></div>
+									<div class="text">
+										<h2 class="title">Lorem Ipsum</h2>
+										<p class="desc">
+											Lorem ipsum dolor sit amet, consectetur <br>adipiscing elit. Vitae, maecenas aliquet <br>penatibus nunc et in quam. Faucibus facilisis <br>libero elit enim leo congue posuere.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
+			</div><!-- // slider -->
+
+			<div class="project">
+				<div class="container">
+					<h2 class="big-title">Project</h2>
+					<div class="row">
+						<div class="col-5">
+							<div class="thumb-big-wrap">
+								<img class="thumb-big" src="" alt="">
+								<div class="layer">
+									<div class="title">Square</div>
+									<p class="desc">티스토리 블로그 스킨입니다. 내용이 길면 말줄임이 나타납니다.</p>
+									<a class="link" href=""></a>
+								</div>
+							</div>
+						</div>
+						<div class="col-7">
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<img src="./assets/images/thumbnail/project_thumb01.png" alt="">
+									</div>
+									<div class="swiper-slide">
+										<img src="./assets/images/thumbnail/project_thumb02.jpg" alt="">
+									</div>
+									<div class="swiper-slide">
+										<img src="./assets/images/thumbnail/project_thumb03.jpg" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- // project -->
+
+			<div class="team">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<h2 class="big-title">Team</h2>
+							<div class="info-wrap">
+								<ul class="menu">
+									<li class="active">Designer</li>
+									<li>Back-end Developer</li>
+									<li>Front-end Developer</li>
+								</ul>
+								<div class="content-wrap">
+									<ul class="content">
+										<li>
+											<div class="info">
+												<div class="thumb" style="background-image: url('/assets/images/icon/icon_email.png')"></div>
+												<div class="name">이름</div>
+												<div class="work">직업</div>
+												<ul class="contact">
+													<li class="email"><a href="mailto:ddd@ddd.ddd"></a></li>
+													<li class="phone"><a href="tel:010-1234-5678"></a></li>
+													<li class="gender wo"></li>
+												</ul>
+											</div>
+										</li>
+										<li>
+											<div class="info">
+												<div class="thumb" style="background-image: url('/assets/images/icon/icon_email.png')"></div>
+												<div class="name">이름</div>
+												<div class="work">직업</div>
+												<ul class="contact">
+													<li class="email"><a href="mailto:ddd@ddd.ddd"></a></li>
+													<li class="phone"><a href="tel:010-1234-5678"></a></li>
+													<li class="gender wo"></li>
+												</ul>
+											</div>
+										</li>
+										<li>
+											<div class="info">
+												<div class="thumb" style="background-image: url('/assets/images/icon/icon_email.png')"></div>
+												<div class="name">이름</div>
+												<div class="work">직업</div>
+												<ul class="contact">
+													<li class="email"><a href="mailto:ddd@ddd.ddd"></a></li>
+													<li class="phone"><a href="tel:010-1234-5678"></a></li>
+													<li class="gender wo"></li>
+												</ul>
+											</div>
+										</li>
+									</ul>
+									<!-- <ul class="content">
+										<li></li>
+										<li></li>
+										<li></li>
+									</ul>
+									<ul class="content">
+										<li></li>
+										<li></li>
+										<li></li>
+									</ul> -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- team -->
+
+			<div class="contact">
+				<div class="container">
+					<div class="bg"></div>
+					<div class="content">
+						<ul>
+							<li>
+								<div>
+									<label for=""></label>
+									<input type="text" placeholder="Company or Your-name">
+								</div>
+							</li>
+							<li>
+								<div>
+									<label for=""></label>
+									<input type="email" placeholder="webmaster@example.com">
+								</div>
+							</li>
+							<li>
+								<div>
+									<label for=""></label>
+									<input type="textarea" placeholder="Please enter your request.">
+								</div>
+							</li>
+						</ul>
+						<button>Send Request<span class="icon"></span></button>
+					</div>
+				</div>
+			</div><!-- contact -->
 		</div>
 	</main>
 
 	<script>
-		const swiper = new Swiper('.swiper-container' , {
+		const swiper_header = new Swiper('.slider .swiper-container' , {
 			sliderPerView: 1,
+		});
+
+
+		const swiper_proj = new Swiper('.project .swiper-container' , {
+			sliderPerView: 2.5,
 		});
 	</script>
 </body>
