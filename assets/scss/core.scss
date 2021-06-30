@@ -7,6 +7,31 @@
 	height: 100px;
 	z-index: 100;
 
+	// 헤더 글자 색상 변경
+	&.gray {
+		.name {
+			color: #FAFAFA;
+		}
+
+		.menu {
+			a {
+				color: #FAFAFA;
+			}
+		}
+	}
+
+	&.black {
+		.name {
+			color: #555;
+		}
+
+		.menu {
+			a {
+				color: #555;
+			}
+		}
+	}
+
 	.header-inner {
 		display: flex;
 		justify-content: space-between;
@@ -150,6 +175,39 @@
 					letter-spacing: 2px;
 				}
 			}
+		}
+	}
+
+	.swiper-pagination {
+		top: inherit;
+		bottom: 0;
+	}
+
+	.play-btn {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		z-index: 5;
+
+		&:hover {
+			.tooltip {
+				display: inline-block;
+			}
+		}
+
+		.icon {
+			display: inline-block;
+			background: url('/assets/images/icon/icon_hand_rock.png') no-repeat;
+			width: 16px;
+			height: 18px;
+			cursor: pointer;
+		}
+
+		.tooltip {
+			display: none;
+			background: url('/assets/images/icon/icon_btn_stop.png') no-repeat;
+			width: 57px;
+			height: 25px;
 		}
 	}
 

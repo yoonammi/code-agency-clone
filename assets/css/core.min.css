@@ -6,6 +6,18 @@
   height: 100px;
   z-index: 100;
 }
+#header.gray .name {
+  color: #FAFAFA;
+}
+#header.gray .menu a {
+  color: #FAFAFA;
+}
+#header.black .name {
+  color: #555;
+}
+#header.black .menu a {
+  color: #555;
+}
 #header .header-inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -139,6 +151,32 @@
   font-weight: 100;
   line-height: 34px;
   letter-spacing: 2px;
+}
+#main .swiper-pagination {
+  top: inherit;
+  bottom: 0;
+}
+#main .play-btn {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 5;
+}
+#main .play-btn:hover .tooltip {
+  display: inline-block;
+}
+#main .play-btn .icon {
+  display: inline-block;
+  background: url("/assets/images/icon/icon_hand_rock.png") no-repeat;
+  width: 16px;
+  height: 18px;
+  cursor: pointer;
+}
+#main .play-btn .tooltip {
+  display: none;
+  background: url("/assets/images/icon/icon_btn_stop.png") no-repeat;
+  width: 57px;
+  height: 25px;
 }
 #main .project {
   padding: 100px 0 150px;
