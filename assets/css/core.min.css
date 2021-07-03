@@ -348,9 +348,152 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: inherit;
+  -webkit-box-direction: inherit;
+      -ms-flex-direction: inherit;
+          flex-direction: inherit;
 }
 #main .contact .bg {
   background: url("/assets/images/bg/contact_bg.jpg") no-repeat;
   width: 397px;
   height: 397px;
+}
+#main .contact .content fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+#main .contact .content li {
+  margin-bottom: 30px;
+}
+#main .contact .content li:last-child {
+  margin-bottom: 40px;
+}
+#main .contact .content label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 2px;
+}
+#main .contact .content input,
+#main .contact .content textarea {
+  padding: 0 20px;
+  background-color: #FFFFFF;
+  border: 1px solid #DDDDDD;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 331px;
+  height: 40px;
+  line-height: 38px;
+  color: #333;
+  outline: none;
+}
+#main .contact .content input::-webkit-input-placeholder, #main .contact .content textarea::-webkit-input-placeholder {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 19px;
+  letter-spacing: 2px;
+  color: #aaa;
+}
+#main .contact .content input::-moz-placeholder, #main .contact .content textarea::-moz-placeholder {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 19px;
+  letter-spacing: 2px;
+  color: #aaa;
+}
+#main .contact .content input:-ms-input-placeholder, #main .contact .content textarea:-ms-input-placeholder {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 19px;
+  letter-spacing: 2px;
+  color: #aaa;
+}
+#main .contact .content input::-ms-input-placeholder, #main .contact .content textarea::-ms-input-placeholder {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 19px;
+  letter-spacing: 2px;
+  color: #aaa;
+}
+#main .contact .content input::placeholder,
+#main .contact .content textarea::placeholder {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 19px;
+  letter-spacing: 2px;
+  color: #aaa;
+}
+#main .contact .content input:focus,
+#main .contact .content textarea:focus {
+  border: 1px solid #AAAAAA;
+}
+#main .contact .content textarea {
+  padding: 10px 20px;
+  width: 452px;
+  height: 89px;
+}
+#main .contact .content .send-btn {
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 200px;
+  height: 40px;
+  background-color: #3C59E5;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 19px;
+  letter-spacing: 2px;
+  color: #fff;
+}
+#main .contact .content .send-btn:hover {
+  background-color: #3B53C3;
+}
+#main .contact .content .send-btn .icon {
+  margin-left: 10px;
+  display: block;
+  background: url("/assets/images/icon/icon_paper_plane.png") no-repeat;
+  width: 14px;
+  height: 14px;
+}
+
+#footer .footer-inner {
+  padding: 70px 0;
+  background-color: #252525;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: -0.005em;
+  color: #fff;
+}
+#footer .footer-inner .copyright {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 23px;
+}
+#footer .footer-inner .copyright .icon {
+  font-weight: 400;
+  line-height: 19px;
+}
+#footer .footer-inner li {
+  margin: 0 2px;
+  display: inline-block;
 }/*# sourceMappingURL=core.min.css.map */

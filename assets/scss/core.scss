@@ -400,12 +400,133 @@
 
 		.container {
 			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-direction: inherit;
 		}
 
 		.bg {
 			background: url('/assets/images/bg/contact_bg.jpg') no-repeat;
 			width: 397px;
 			height: 397px;
+		}
+
+		.content {
+			fieldset {
+				padding: 0;
+				margin: 0;
+				border: 0;
+			}
+
+			ul {}
+
+			li {
+				margin-bottom: 30px;
+
+				&:last-child {
+					margin-bottom: 40px;
+				}
+			}
+
+			label {
+				display: block;
+				margin-bottom: 10px;
+				font-size: 14px;
+				font-weight: 300;
+				line-height: 20px;
+				letter-spacing: 2px;
+			}
+
+			input,
+			textarea {
+				padding: 0 20px;
+				background-color: #FFFFFF;
+				border: 1px solid #DDDDDD;
+				box-sizing: border-box;
+				// width: 100%;
+				width: 331px;
+				height: 40px;
+				line-height: 38px;
+				color: #333;
+				outline: none;
+
+				&::placeholder {
+					font-size: 13px;
+					font-weight: 300;
+					line-height: 19px;
+					letter-spacing: 2px;
+					color: #aaa;
+				}
+
+				&:focus {
+					border: 1px solid #AAAAAA;
+				}
+			}
+
+			textarea {
+				padding: 10px 20px;
+				width: 452px;
+				height: 89px;
+			}
+
+			.send-btn {
+				margin-left: auto;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 200px;
+				height: 40px;
+				background-color: #3C59E5;
+				font-size: 13px;
+				font-weight: 300;
+				line-height: 19px;
+				letter-spacing: 2px;
+				color: #fff;
+
+				&:hover {
+					background-color: #3B53C3;
+				}
+
+				.icon {
+					margin-left: 10px;
+					display: block;
+					background: url('/assets/images/icon/icon_paper_plane.png') no-repeat;
+					width: 14px;
+					height: 14px;
+				}
+			}
+		}
+	}
+}
+
+//footer
+#footer {
+	.footer-inner {
+		padding: 70px 0;
+		background-color: #252525;
+		text-align: center;
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 30px;
+		letter-spacing: -0.005em;
+		color: #fff;
+
+		.copyright {
+			display: block;
+			margin-bottom: 7px;
+			font-size: 16px;
+			font-weight: 700;
+			line-height: 23px;
+
+			.icon {
+				font-weight: 400;
+				line-height: 19px;
+			}
+		}
+
+		li {
+			margin: 0 2px;
+			display: inline-block;
 		}
 	}
 }

@@ -39,14 +39,14 @@
 
 	<main id="main">
 		<div class="main-inner">
-			<arcicle class="slider">
+			<article class="slider">
 				<div class="swiper-container">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide" data-header-type="white">
 							<div class="slider-inner slide01">
 								<div class="container">
 									<h2 class="title">Portfolio</h2>
-									<div class="desc">HTML, JavaScript, SASS 등 Front-end 개발 연습하기 위해 퍼블리싱 했습니다.</div>
+									<div class="desc">HTML, JavaScript, SASS 등 Front-end 개발 연습을 하기 위해 퍼블리싱 했습니다.</div>
 								</div>
 							</div>
 						</div>
@@ -77,9 +77,9 @@
 						<span class="tooltip"></span>
 					</div>
 				</div>
-			</arcicle><!-- // slider -->
+			</article><!-- // slider -->
 
-			<arcicle class="project">
+			<article class="project">
 				<div class="container">
 					<h2 class="big-title">Project</h2>
 					<div class="row">
@@ -110,9 +110,9 @@
 						</div>
 					</div>
 				</div>
-			</arcicle><!-- // project -->
+			</article><!-- // project -->
 
-			<arcicle class="team">
+			<article class="team">
 				<div class="container">
 					<div class="row">
 						<div class="col-12">
@@ -177,49 +177,72 @@
 						</div>
 					</div>
 				</div>
-			</arcicle><!-- team -->
+			</article><!-- team -->
 
-			<arcicle class="contact">
+			<article class="contact">
 				<div class="container">
 					<h2 class="big-title blind">Contact</h2>
 					<div class="bg"></div>
 					<div class="content">
-						<ul>
-							<li>
-								<div>
-									<label for=""></label>
-									<input type="text" placeholder="Company or Your-name">
-								</div>
-							</li>
-							<li>
-								<div>
-									<label for=""></label>
-									<input type="email" placeholder="webmaster@example.com">
-								</div>
-							</li>
-							<li>
-								<div>
-									<label for=""></label>
-									<input type="textarea" placeholder="Please enter your request.">
-								</div>
-							</li>
-						</ul>
-						<button>Send Request<span class="icon"></span></button>
+						<form action="" method="" onsubmit="">
+							<fieldset>
+								<legend class="blind">문의하기</legend>
+								<ul>
+									<li>
+										<div>
+											<label for="uname">Company or Your-name</label>
+											<input type="text" id="uname" placeholder="Company or Your-name">
+										</div>
+									</li>
+									<li>
+										<div>
+											<label for="email">Email</label>
+											<input type="email" id="email" placeholder="webmaster@example.com">
+										</div>
+									</li>
+									<li>
+										<div>
+											<label for="messages">Messages</label>
+											<textarea name="" id="messages" cols="30" rows="10" placeholder="Please enter your request." style="resize: none;"></textarea>
+										</div>
+									</li>
+								</ul>
+								<button type="button" class="send-btn" onclick="form_check()">Send Request<span class="icon"></span></button>
+							</fieldset>
+						</form>
 					</div>
 				</div>
-			</arcicle><!-- contact -->
+			</article><!-- contact -->
 		</div>
 	</main>
 
+	<footer id="footer">
+		<ul class="footer-inner">
+			<li><span class="copyright"><span class="icon">ⓒ</span> 2021 Yoo Nam MI</span>
+				<ul>
+					<li><a href="https://jquery.com" target="blank">jQuery,</a></li>
+					<li><a href="https://swiperjs.com" target="blank">Swiper,</a></li>
+					<li><a href="https://fontawesome.com" target="blank">Font Awesome 5,</a></li>
+					<li><a href="https://randomuser.me/" target="blank">Random User Generator,</a></li>
+					<li><a href="https://unsplash.com/" target="blank">Unsplash,</a></li>
+					<li><a href="https://www.vecteezy.com/free-vector/website" target="blank">Website Vectors by Vecteezy</a></li>
+				</ul>
+			</li>
+		</ul>
+	</footer>
+
 	<script>
+		// 이메일 정규식
+		var regExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+
+		// 메인 슬라이드 변경 시 헤더 색상 변경
 		var header = document.getElementById('header');
 		// var dd = a;
-
 		function change_header(swiper) {
 			var h_type = swiper.slides[swiper.activeIndex].getAttribute('data-header-type');
 
 			header.removeAttribute('class');
-			// header.classList.add(dd, h_type);
+			header.classList.add(h_type);
 		}
 
 		const swiper_header = new Swiper('.slider .swiper-container' , {
@@ -239,12 +262,33 @@
 			}
 		});
 
-
-
-
 		const swiper_proj = new Swiper('.project .swiper-container' , {
 			sliderPerView: 2.5,
 		});
+
+
+		// team 불러오기
+		$('.team .menu li').on('click',function(){
+			$.ajax({
+				url: 'https://randomuser.me/api/',
+				dataType: 'json',
+				success: function(data){
+					console.log(data);
+				}
+			});
+		});
+
+
+		// contact 문의하기
+		var uname = document.getElementById('uname');
+		var email = document.getElementById('email');
+		function form_check() {
+			if (uname.value == "") {
+				alert('성명을 입력하세요.');
+			} else if (!regExp.test(email.value)) {
+				alert('이메일 주소를 확인하세요.');
+			}
+		}
 	</script>
 </body>
 </html>
