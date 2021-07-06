@@ -284,11 +284,6 @@
 			width: 241px;
 
 			li {
-				padding: 40px 0 40px 30px;
-				font-size: 14px;
-				line-height: 20px;
-				letter-spacing: 1px;
-				color: #000;
 				border-bottom: 1px solid #ddd;
 				cursor: pointer;
 
@@ -299,6 +294,15 @@
 				&:last-child {
 					border-bottom: 0;
 				}
+
+				a {
+					display: block;
+					padding: 40px 0 40px 30px;
+					font-size: 14px;
+					line-height: 20px;
+					letter-spacing: 1px;
+					color: #000;
+				}
 			}
 		}
 
@@ -308,9 +312,13 @@
 		}
 
 		.content {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
+			display: none;
+
+			&.active {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
 
 			> li {
 				width: calc(100% / 3);

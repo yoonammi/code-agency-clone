@@ -244,11 +244,6 @@
   width: 241px;
 }
 #main .team .menu li {
-  padding: 40px 0 40px 30px;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 1px;
-  color: #000;
   border-bottom: 1px solid #ddd;
   cursor: pointer;
 }
@@ -258,11 +253,22 @@
 #main .team .menu li:last-child {
   border-bottom: 0;
 }
+#main .team .menu li a {
+  display: block;
+  padding: 40px 0 40px 30px;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  color: #000;
+}
 #main .team .content-wrap {
   width: calc(100% - 241px);
   background-color: #FAFAFA;
 }
 #main .team .content {
+  display: none;
+}
+#main .team .content.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

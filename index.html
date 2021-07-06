@@ -119,12 +119,12 @@
 							<h2 class="big-title">Team</h2>
 							<div class="info-wrap">
 								<ul class="menu">
-									<li class="active">Designer</li>
-									<li>Back-end Developer</li>
-									<li>Front-end Developer</li>
+									<li class="active"><a href="#tab01">Designer</a></li>
+									<li><a href="#tab02">Back-end Developer</a></li>
+									<li><a href="#tab03">Front-end Developer</a></li>
 								</ul>
 								<div class="content-wrap">
-									<ul class="content">
+									<ul class="content tab01 active">
 										<li>
 											<div class="info">
 												<div class="thumb" style="background-image: url('/assets/images/icon/icon_email.png')"></div>
@@ -162,16 +162,82 @@
 											</div>
 										</li>
 									</ul>
-									<!-- <ul class="content">
-										<li></li>
-										<li></li>
-										<li></li>
+									<ul class="content tab02">
+										<li>
+											<div class="info">
+												<div class="thumb" style="background-image: url('/assets/images/icon/icon_email.png')"></div>
+												<div class="name">이름</div>
+												<div class="work">직업</div>
+												<ul class="contact">
+													<li class="email"><a href="mailto:ddd@ddd.ddd"></a></li>
+													<li class="phone"><a href="tel:010-1234-5678"></a></li>
+													<li class="gender wo"></li>
+												</ul>
+											</div>
+										</li>
+										<li>
+											<div class="info">
+												<div class="thumb" style="background-image: url('/assets/images/icon/icon_email.png')"></div>
+												<div class="name">이름</div>
+												<div class="work">직업</div>
+												<ul class="contact">
+													<li class="email"><a href="mailto:ddd@ddd.ddd"></a></li>
+													<li class="phone"><a href="tel:010-1234-5678"></a></li>
+													<li class="gender wo"></li>
+												</ul>
+											</div>
+										</li>
+										<li>
+											<div class="info">
+												<div class="thumb" style="background-image: url('/assets/images/icon/icon_email.png')"></div>
+												<div class="name">이름</div>
+												<div class="work">직업</div>
+												<ul class="contact">
+													<li class="email"><a href="mailto:ddd@ddd.ddd"></a></li>
+													<li class="phone"><a href="tel:010-1234-5678"></a></li>
+													<li class="gender wo"></li>
+												</ul>
+											</div>
+										</li>
 									</ul>
-									<ul class="content">
-										<li></li>
-										<li></li>
-										<li></li>
-									</ul> -->
+									<ul class="content tab03">
+										<li>
+											<div class="info">
+												<div class="thumb" style="background-image: url('/assets/images/icon/icon_email.png')"></div>
+												<div class="name">이름</div>
+												<div class="work">직업</div>
+												<ul class="contact">
+													<li class="email"><a href="mailto:ddd@ddd.ddd"></a></li>
+													<li class="phone"><a href="tel:010-1234-5678"></a></li>
+													<li class="gender wo"></li>
+												</ul>
+											</div>
+										</li>
+										<li>
+											<div class="info">
+												<div class="thumb" style="background-image: url('/assets/images/icon/icon_email.png')"></div>
+												<div class="name">이름</div>
+												<div class="work">직업</div>
+												<ul class="contact">
+													<li class="email"><a href="mailto:ddd@ddd.ddd"></a></li>
+													<li class="phone"><a href="tel:010-1234-5678"></a></li>
+													<li class="gender wo"></li>
+												</ul>
+											</div>
+										</li>
+										<li>
+											<div class="info">
+												<div class="thumb" style="background-image: url('/assets/images/icon/icon_email.png')"></div>
+												<div class="name">이름</div>
+												<div class="work">직업</div>
+												<ul class="contact">
+													<li class="email"><a href="mailto:ddd@ddd.ddd"></a></li>
+													<li class="phone"><a href="tel:010-1234-5678"></a></li>
+													<li class="gender wo"></li>
+												</ul>
+											</div>
+										</li>
+									</ul>
 								</div>
 							</div>
 						</div>
@@ -232,6 +298,32 @@
 	</footer>
 
 	<script>
+
+
+		$('.menu li').on('click',function(e){
+			e.preventDefault();
+
+
+			var btn = $(this).children('a').attr('href');
+				btn = btn.replace('#','')
+
+			$('.team .content').each(function(index,element){
+				var wrap = $(element);
+				var tt = wrap.attr('class');
+
+				console.log(tt);
+
+			});
+
+
+		});
+		// $('.content').each(function(){
+		// 	var dd = $('this').getAttribute('data-tab-number');
+		// 	console.log(dd);
+
+		// });
+
+
 		// 이메일 정규식
 		var regExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
 
@@ -263,17 +355,22 @@
 		});
 
 		const swiper_proj = new Swiper('.project .swiper-container' , {
-			sliderPerView: 2.5,
+			sliderPerView: 2,
 		});
 
 
-		// team 불러오기
+		// team
+		// tab 스크립트
+		// $('.').each(function(){
+
+		// });
+		// random user 불러오기
 		$('.team .menu li').on('click',function(){
 			$.ajax({
 				url: 'https://randomuser.me/api/',
 				dataType: 'json',
 				success: function(data){
-					console.log(data);
+					// console.log(data);
 				}
 			});
 		});
